@@ -1,9 +1,7 @@
 #include "lists.h"
 
 /**
- * check_cycle - checking if a singly linked list has
- * a cycle in it
- *
+ * check_cycle - function checking cycle
  * @list: pointer to the list
  *
  * Return: 0 if there is no cycle,
@@ -11,28 +9,28 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *p2;
+	listint_t *t2;
 	listint_t *prev;
 
-	p2 = list;
+	t2 = list;
 	prev = list;
-	while (list && p2 && p2->next)
+	while (list && t2 && t2->next)
 	{
 		list = list->next;
-		p2 = p2->next->next;
+		t2 = t2->next->next;
 
-		if (list == p2)
+		if (list == t2)
 		{
 			list = prev;
-			prev =  p2;
+			prev =  t2;
 			while (1)
 			{
-				p2 = prev;
-				while (p2->next != list && p2->next != prev)
+				t2 = prev;
+				while (t2->next != list && t2->next != prev)
 				{
-					p2 = p2->next;
+					t2 = t2->next;
 				}
-				if (p2->next == list)
+				if (t2->next == list)
 					break;
 
 				list = list->next;

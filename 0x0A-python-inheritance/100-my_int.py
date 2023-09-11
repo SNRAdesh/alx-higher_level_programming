@@ -3,8 +3,9 @@
 MyInt is a rebel. MyInt has == and != operators inverted
 """
 
+
 class MyInt(int):
- """Defines a class MyInt.
+    """Defines a class MyInt.
 
     Args:
         int (int): value

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Defines a class BaseGeometry based on 6-base_geometry.py"""
+
+
 class BaseGeometry:
     """Class BaseGeometry.
     """
@@ -13,6 +15,7 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """Validates value.
+
         Args:
             name (str): name of the object.
             value (int): value of the property.
